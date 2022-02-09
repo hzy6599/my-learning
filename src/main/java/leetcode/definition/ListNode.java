@@ -8,7 +8,7 @@ public class ListNode {
   public ListNode() {}
 
   public ListNode(int val) {
-    val = val;
+    this.val = val;
     next = null;
   }
 
