@@ -1,4 +1,4 @@
-package leetcode.helper.listNode;
+package leetcode.helper.listnode;
 
 import leetcode.definition.ListNode;
 import org.junit.jupiter.api.Assertions;
