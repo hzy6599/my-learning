@@ -1,4 +1,4 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q1_q50;
 
 public class Q10 {
 

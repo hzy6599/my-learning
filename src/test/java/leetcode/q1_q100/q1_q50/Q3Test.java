@@ -1,5 +1,6 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q1_q50;
 
+import leetcode.q1_q100.q1_q50.Q3;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -7,22 +8,22 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-public class Q53Test {
+public class Q3Test {
 
-  Q53 question = new Q53();
+  Q3 question = new Q3();
 
   @ParameterizedTest
   @MethodSource("dataProvider")
-  public void test(int[] input, int expected) {
-    int actual = question.maxSubArray(input);
+  public void test(String s, int expected) {
+    int actual = question.lengthOfLongestSubstring(s);
     Assertions.assertEquals(expected, actual);
   }
 
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
-        Arguments.of(new int[]{-2,1,-3,4,-1,2,1,-5,4}, 6),
-        Arguments.of(new int[]{1}, 1),
-        Arguments.of(new int[]{5,4,-1,7,8}, 23)
+        Arguments.of("abcabcbb", 3),
+        Arguments.of("bbbbb", 1),
+        Arguments.of("pwwkew", 3)
     );
   }
 

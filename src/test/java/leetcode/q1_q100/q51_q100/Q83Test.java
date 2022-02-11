@@ -1,7 +1,8 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q51_q100;
 
 import leetcode.definition.ListNode;
 import leetcode.helper.listnode.ListNodeHelper;
+import leetcode.q1_q100.q51_q100.Q83;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

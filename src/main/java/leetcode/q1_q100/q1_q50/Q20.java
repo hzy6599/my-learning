@@ -1,4 +1,4 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q1_q50;
 
 import java.util.HashMap;
 import java.util.Map;

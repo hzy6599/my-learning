@@ -1,4 +1,4 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q51_q100;
 
 public class Q53 {
 

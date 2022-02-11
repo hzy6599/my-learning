@@ -1,5 +1,6 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q1_q50;
 
+import leetcode.q1_q100.q1_q50.Q46;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

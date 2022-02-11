@@ -1,4 +1,4 @@
-package leetcode.q1_q100;
+package leetcode.q1_q100.q51_q100;
 
 import leetcode.definition.ListNode;
 
