@@ -1,6 +1,5 @@
 package leetcode.q1_q100.q1_q50;
 
-import leetcode.q1_q100.q1_q50.Q1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
