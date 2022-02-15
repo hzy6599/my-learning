@@ -16,7 +16,7 @@ public class ListNodeHelper {
     return (l1.val == l2.val) && compareListNodes(l1.next, l2.next);
   }
 
-  public static ListNode buildListNodeWithIntegerArray(int[] array) {
+  public static ListNode buildListNode(int[] array) {
     ListNodeBuilder builder = new ListNodeBuilder();
 
     for (int number: array) {

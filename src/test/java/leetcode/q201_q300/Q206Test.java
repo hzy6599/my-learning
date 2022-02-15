@@ -23,16 +23,16 @@ public class Q206Test {
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,3,4,5}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{5,4,3,2,1})
+            ListNodeHelper.buildListNode(new int[]{1,2,3,4,5}),
+            ListNodeHelper.buildListNode(new int[]{5,4,3,2,1})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{2,1})
+            ListNodeHelper.buildListNode(new int[]{1,2}),
+            ListNodeHelper.buildListNode(new int[]{2,1})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{})
+            ListNodeHelper.buildListNode(new int[]{}),
+            ListNodeHelper.buildListNode(new int[]{})
         )
     );
   }

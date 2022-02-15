@@ -2,7 +2,6 @@ package leetcode.q1_q100.q1_q50;
 
 import leetcode.definition.ListNode;
 import leetcode.helper.listnode.ListNodeHelper;
-import leetcode.q1_q100.q1_q50.Q21;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -24,17 +23,17 @@ public class Q21Test {
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,4}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,3,4}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,1,2,3,4,4})),
+            ListNodeHelper.buildListNode(new int[]{1,2,4}),
+            ListNodeHelper.buildListNode(new int[]{1,3,4}),
+            ListNodeHelper.buildListNode(new int[]{1,1,2,3,4,4})),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{})),
+            ListNodeHelper.buildListNode(new int[]{}),
+            ListNodeHelper.buildListNode(new int[]{}),
+            ListNodeHelper.buildListNode(new int[]{})),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{0}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{0}))
+            ListNodeHelper.buildListNode(new int[]{}),
+            ListNodeHelper.buildListNode(new int[]{0}),
+            ListNodeHelper.buildListNode(new int[]{0}))
     );
   }
 

@@ -2,7 +2,6 @@ package leetcode.q1_q100.q51_q100;
 
 import leetcode.definition.ListNode;
 import leetcode.helper.listnode.ListNodeHelper;
-import leetcode.q1_q100.q51_q100.Q83;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -24,16 +23,16 @@ public class Q83Test {
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,1,2}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2})
+            ListNodeHelper.buildListNode(new int[]{1,1,2}),
+            ListNodeHelper.buildListNode(new int[]{1,2})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,1,2,3,3}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,3})
+            ListNodeHelper.buildListNode(new int[]{1,1,2,3,3}),
+            ListNodeHelper.buildListNode(new int[]{1,2,3})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,3,3,3}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,3})
+            ListNodeHelper.buildListNode(new int[]{1,2,3,3,3}),
+            ListNodeHelper.buildListNode(new int[]{1,2,3})
         )
     );
   }

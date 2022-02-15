@@ -48,9 +48,9 @@ public class Q141Test {
 
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
-        Arguments.of(ListNodeHelper.buildListNodeWithIntegerArray(new int[]{3,2,0,-4}), 1, true),
-        Arguments.of(ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2}), 0, true),
-        Arguments.of(ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1}), -1, false)
+        Arguments.of(ListNodeHelper.buildListNode(new int[]{3,2,0,-4}), 1, true),
+        Arguments.of(ListNodeHelper.buildListNode(new int[]{1,2}), 0, true),
+        Arguments.of(ListNodeHelper.buildListNode(new int[]{1}), -1, false)
     );
   }
 }

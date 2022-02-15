@@ -2,7 +2,6 @@ package leetcode.q1_q100.q1_q50;
 
 import leetcode.definition.ListNode;
 import leetcode.helper.listnode.ListNodeHelper;
-import leetcode.q1_q100.q1_q50.Q19;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -17,8 +16,8 @@ public class Q19Test {
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void test(int[] listNodes, int n, int[] expectedNodes) {
-    ListNode head = ListNodeHelper.buildListNodeWithIntegerArray(listNodes);
-    ListNode expected = ListNodeHelper.buildListNodeWithIntegerArray(expectedNodes);
+    ListNode head = ListNodeHelper.buildListNode(listNodes);
+    ListNode expected = ListNodeHelper.buildListNode(expectedNodes);
     ListNode actual = question.removeNthFromEnd(head, n);
     Assertions.assertTrue(ListNodeHelper.compareListNodes(expected, actual));
   }

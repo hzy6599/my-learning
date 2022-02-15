@@ -30,19 +30,19 @@ public class Q203Test {
   public static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,6,3,4,5,6}),
+            ListNodeHelper.buildListNode(new int[]{1,2,6,3,4,5,6}),
             6,
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{1,2,3,4,5})
+            ListNodeHelper.buildListNode(new int[]{1,2,3,4,5})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{}),
+            ListNodeHelper.buildListNode(new int[]{}),
             1,
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{})
+            ListNodeHelper.buildListNode(new int[]{})
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{7,7,7,7}),
+            ListNodeHelper.buildListNode(new int[]{7,7,7,7}),
             7,
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[]{})
+            ListNodeHelper.buildListNode(new int[]{})
         )
     );
   }

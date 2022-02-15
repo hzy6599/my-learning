@@ -13,7 +13,7 @@ public class ListNodeHelperTest {
   @ParameterizedTest
   @MethodSource("dataForBuildListNodeWithIntArray")
   public void testBuildListNodeWithIntArray(int[] input, int[] expectedValue) {
-    ListNode node = ListNodeHelper.buildListNodeWithIntegerArray(input);
+    ListNode node = ListNodeHelper.buildListNode(input);
     for (int expectedNumber: expectedValue) {
       Assertions.assertEquals(expectedNumber, node.val);
       node = node.next;
@@ -35,13 +35,13 @@ public class ListNodeHelperTest {
   public static Stream<Arguments> dataForCompareListNodes() {
     return Stream.of(
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[] {1,2,3,4,5}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[] {1,2,3,4,5}),
+            ListNodeHelper.buildListNode(new int[] {1,2,3,4,5}),
+            ListNodeHelper.buildListNode(new int[] {1,2,3,4,5}),
             true
         ),
         Arguments.of(
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[] {1,2,3,4,5}),
-            ListNodeHelper.buildListNodeWithIntegerArray(new int[] {1,2,3,4,4}),
+            ListNodeHelper.buildListNode(new int[] {1,2,3,4,5}),
+            ListNodeHelper.buildListNode(new int[] {1,2,3,4,4}),
             false
         )
     );
