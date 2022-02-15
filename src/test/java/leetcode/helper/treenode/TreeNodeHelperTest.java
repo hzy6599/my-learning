@@ -33,7 +33,7 @@ public class TreeNodeHelperTest {
   @ParameterizedTest
   @MethodSource("dataProviderPowerOfTwo")
   public void testPowerOfTwo(int number, boolean expected) {
-    boolean actual = TreeNodeHelper.powerOfTwo(number);
+    boolean actual = TreeNodeHelper.isPowerOfTwo(number);
     Assertions.assertEquals(expected, actual);
   }
 

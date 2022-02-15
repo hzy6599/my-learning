@@ -18,9 +18,7 @@ public class TreeNodeHelper {
                && compareTreeNode(tn1.right, tn2.right);
   }
 
-
-
-  public static boolean powerOfTwo(int number) {
+  public static boolean isPowerOfTwo(int number) {
     int count = 0;
     while (number != 0) {
       count++;
