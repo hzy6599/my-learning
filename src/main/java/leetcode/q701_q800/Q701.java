@@ -1,4 +1,4 @@
-package leetcode.q601_q700;
+package leetcode.q701_q800;
 
 import leetcode.definition.TreeNode;
 
