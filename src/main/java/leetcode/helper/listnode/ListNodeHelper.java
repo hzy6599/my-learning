@@ -26,4 +26,23 @@ public class ListNodeHelper {
     return builder.build();
   }
 
+  public static ListNode buildCyclicListNode(int[] array, int circleStart) {
+    ListNode listNode = buildListNode(array);
+    if (circleStart == -1) {
+      return listNode;
+    }
+    ListNode start = null;
+    ListNode dummy = listNode;
+    int index = 0;
+    while (dummy.next != null) {
+      if (index == circleStart) {
+        start = dummy;
+      }
+      dummy = dummy.next;
+      index++;
+    }
+    dummy.next = start;
+    return listNode;
+  }
+
 }
