@@ -33,9 +33,9 @@ public class Q78 {
 
   private void backTrack(List<List<Integer>> results, List<Integer> subset, int[] nums, int curr) {
     results.add(new ArrayList<>(subset));
-    for (int i = curr; curr < nums.length; curr++) {
-      subset.add(nums[curr]);
-      backTrack(results, subset, nums, curr + 1);
+    for (int i = curr; i < nums.length; i++) {
+      subset.add(nums[i]);
+      backTrack(results, subset, nums, i + 1);
       subset.remove(subset.size() - 1);
     }
   }
