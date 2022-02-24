@@ -18,13 +18,6 @@ public class SortingTest {
 
   @ParameterizedTest
   @MethodSource("dataProvider")
-  public void testQuickSortTwo(int[] actual, int[] expected) {
-    Sorting.quickSortTwo(actual, 0, actual.length - 1);
-    Assertions.assertArrayEquals(expected, actual);
-  }
-
-  @ParameterizedTest
-  @MethodSource("dataProvider")
   public void testMergeSort(int[] actual, int[] expected) {
     Sorting.mergeSort(actual, 0, actual.length - 1);
     Assertions.assertArrayEquals(expected, actual);
@@ -34,6 +27,13 @@ public class SortingTest {
   @MethodSource("dataProvider")
   public void testInsertionSort(int[] actual, int[] expected) {
     Sorting.insertionSort(actual);
+    Assertions.assertArrayEquals(expected, actual);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testBubbleSort(int[] actual, int[] expected) {
+    Sorting.bubbleSort(actual);
     Assertions.assertArrayEquals(expected, actual);
   }
 

@@ -2,32 +2,15 @@ package sorting;
 
 public class Sorting {
 
+  /**
+   * Quick sort algorithm
+   * 1. Average Time complexity O(nlogn)
+   * 2. Best Time complexity O(nlogn)
+   * 3. Worst Time complexity O(n^2)
+   * 4. Space complexity O(nlogn)
+   * @param array the array which need to be sorted
+   */
   public static void quickSort(int[] array, int left, int right) {
-    if (array == null || left + 1 >= right) {
-      return;
-    }
-
-    int pivot = array[left];
-    int start = left;
-    int end = right;
-
-    while (start < end) {
-      while (start < end && array[end] >= pivot) {
-        end--;
-      }
-      array[start] = array[end];
-
-      while (start < end && array[start] <= pivot) {
-        start++;
-      }
-      array[end] = array[start];
-    }
-    array[start] = pivot;
-    quickSort(array, left, end - 1);
-    quickSort(array, end + 1, right);
-  }
-
-  public static void quickSortTwo(int[] array, int left, int right) {
     if (array == null || left + 1 >= right) {
       return;
     }
@@ -63,6 +46,14 @@ public class Sorting {
     array[a] = array[a] ^ array[b];
   }
 
+  /**
+   * Merge sort algorithm
+   * 1. Average Time complexity O(nlogn)
+   * 2. Best Time complexity O(nlogn)
+   * 3. Worst Time complexity O(nlogn)
+   * 4. Space complexity O(n)
+   * @param array the array which need to be sorted
+   */
   public static void mergeSort(int[] array, int start, int end) {
     if (start < end) {
       int mid = start + ((end - start) >> 1);
@@ -95,11 +86,37 @@ public class Sorting {
     }
   }
 
+  /**
+   * Insertion sort algorithm
+   * 1. Average Time complexity O(n^2)
+   * 2. Best Time complexity O(n)
+   * 3. Worst Time complexity O(n^2)
+   * 4. Space complexity O(1)
+   * @param array the array which need to be sorted
+   */
   public static void insertionSort(int[] array) {
     for (int i = 0; i < array.length; i++) {
       for (int j = i; j > 0; j--) {
         if (array[j] < array[j - 1]) {
           swap(array, j - 1, j);
+        }
+      }
+    }
+  }
+
+  /**
+   * Bubble sort algorithm.
+   * 1. Average Time complexity O(n^2)
+   * 2. Best Time complexity O(n)
+   * 3. Worst Time complexity O(n^2)
+   * 4. Space complexity O(1)
+   * @param array the array which need to be sorted
+   */
+  public static void bubbleSort(int[] array) {
+    for (int i = array.length - 1; i > 0; i--) {
+      for (int j = 0; j < i; j++) {
+        if (array[j] > array[j + 1]) {
+          swap(array, j, j + 1);
         }
       }
     }
