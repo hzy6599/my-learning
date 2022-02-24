@@ -122,4 +122,26 @@ public class Sorting {
     }
   }
 
+  /**
+   * Selection sort algorithm.
+   * 1. Average Time complexity O(n^2)
+   * 2. Best Time complexity O(n)
+   * 3. Worst Time complexity O(n^2)
+   * 4. Space complexity O(1)
+   * @param array the array which need to be sorted
+   */
+  public static void selectionSort(int[] array) {
+    for (int i = 0; i < array.length; i++) {
+      int min = array[i];
+      int index = i;
+      for (int j = i; j < array.length; j++) {
+        if (array[j] < min) {
+          min = array[j];
+          index = j;
+        }
+      }
+      swap(array, i, index);
+    }
+  }
+
 }

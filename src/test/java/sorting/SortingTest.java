@@ -37,6 +37,13 @@ public class SortingTest {
     Assertions.assertArrayEquals(expected, actual);
   }
 
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testSelectionSort(int[] actual, int[] expected) {
+    Sorting.selectionSort(actual);
+    Assertions.assertArrayEquals(expected, actual);
+  }
+
   private static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(
