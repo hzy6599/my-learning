@@ -7,26 +7,33 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-public class SortTest {
+public class SortingTest {
 
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void testQuickSortOne(int[] actual, int[] expected) {
-    QuickSort.quickSort(actual, 0, actual.length - 1);
+    Sorting.quickSort(actual, 0, actual.length - 1);
     Assertions.assertArrayEquals(expected, actual);
   }
 
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void testQuickSortTwo(int[] actual, int[] expected) {
-    QuickSort.quickSortTwo(actual, 0, actual.length - 1);
+    Sorting.quickSortTwo(actual, 0, actual.length - 1);
     Assertions.assertArrayEquals(expected, actual);
   }
 
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void testMergeSort(int[] actual, int[] expected) {
-    MergeSort.mergeSort(actual, 0, actual.length - 1);
+    Sorting.mergeSort(actual, 0, actual.length - 1);
+    Assertions.assertArrayEquals(expected, actual);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testInsertionSort(int[] actual, int[] expected) {
+    Sorting.insertionSort(actual);
     Assertions.assertArrayEquals(expected, actual);
   }
 
