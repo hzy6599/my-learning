@@ -1,5 +1,8 @@
 package interview.algorithm;
 
+/**
+ * Given two string s1 and s2, check if s1 contains any permutation of s2
+ */
 public class CheckSubString {
 
   public static boolean dictionary(String s1, String s2) {
