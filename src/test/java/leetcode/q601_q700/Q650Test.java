@@ -16,6 +16,13 @@ public class Q650Test {
     Assertions.assertEquals(expected, minNumberOfOperations);
   }
 
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testMath(int target, int expected) {
+    int minNumberOfOperations = Q650.minStepsMath(target);
+    Assertions.assertEquals(expected, minNumberOfOperations);
+  }
+
   private static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(3, 3),

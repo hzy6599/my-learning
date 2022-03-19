@@ -15,4 +15,19 @@ public class Q650 {
     return dp[n];
   }
 
+  public static int minStepsMath(int n) {
+    int answer = 0;
+    int factor = 2;
+
+    while (n > 1) {
+      while (n % factor == 0) {
+        answer += factor;
+        n /= factor;
+      }
+      factor++;
+    }
+
+    return answer;
+  }
+
 }
