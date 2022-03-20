@@ -1,6 +1,5 @@
 package leetcode.q101_q200.q101_q150;
 
-import leetcode.q101_q200.q101_q150.Q122;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -10,12 +9,24 @@ import java.util.stream.Stream;
 
 public class Q122Test {
 
-  Q122 q122 = new Q122();
-
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void test(int[] prices, int expected) {
-    int actual = q122.maxProfit(prices);
+    int actual = Q122.maxProfit(prices);
+    Assertions.assertEquals(expected, actual);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testMath(int[] prices, int expected) {
+    int actual = Q122.maxProfitMath(prices);
+    Assertions.assertEquals(expected, actual);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testPeakValley(int[] prices, int expected) {
+    int actual = Q122.maxProfitPeakValley(prices);
     Assertions.assertEquals(expected, actual);
   }
 

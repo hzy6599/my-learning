@@ -2,7 +2,7 @@ package leetcode.q101_q200.q101_q150;
 
 public class Q122 {
 
-  public int maxProfit(int[] prices) {
+  public static int maxProfit(int[] prices) {
     if (prices.length == 1) {
       return 0;
     }
@@ -21,6 +21,31 @@ public class Q122 {
     profit += (prices[prices.length - 1] - prices[buyDay]);
 
     return profit;
+  }
+
+  public static int maxProfitMath(int[] prices) {
+    int ans = 0;
+    for (int i = 1; i < prices.length; i++) {
+      ans += prices[i] - prices[i - 1] > 0 ? prices[i] - prices[i - 1] : 0;
+    }
+    return ans;
+  }
+
+  public static int maxProfitPeakValley(int[] prices) {
+    if (prices.length <= 1) {
+      return 0;
+    }
+    int ans = 0;
+    int valley = Integer.MAX_VALUE;
+    for (int i = 0; i < prices.length - 1; i++) {
+      valley = Math.min(valley, prices[i]);
+      if (prices[i + 1] < prices[i]) {
+        ans += (prices[i] - valley);
+        valley = prices[i + 1];
+      }
+    }
+    ans += prices[prices.length - 1] - valley;
+    return ans;
   }
 
 }
