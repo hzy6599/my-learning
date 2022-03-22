@@ -11,8 +11,15 @@ public class Q309Test {
 
   @ParameterizedTest
   @MethodSource("dataProvider")
-  public void test(int[] prices, int expectedProfit) {
-    int actualProfit = Q309.maxProfit(prices);
+  public void testDP1(int[] prices, int expectedProfit) {
+    int actualProfit = Q309.maxProfitDP1(prices);
+    Assertions.assertEquals(expectedProfit, actualProfit);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void testDP2(int[] prices, int expectedProfit) {
+    int actualProfit = Q309.maxProfitDP2(prices);
     Assertions.assertEquals(expectedProfit, actualProfit);
   }
 
