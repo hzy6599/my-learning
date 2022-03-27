@@ -14,7 +14,7 @@ public class Q680Test {
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void test(String s, boolean expected) {
-    boolean actual = q680.validPalindrome(s);
+    boolean actual = q680.validPalindromeOnePass(s);
     Assertions.assertEquals(expected, actual);
   }
 
