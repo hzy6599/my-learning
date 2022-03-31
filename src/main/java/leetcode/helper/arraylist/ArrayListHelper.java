@@ -23,6 +23,13 @@ public class ArrayListHelper {
     };
   }
 
+  public static void sort2DArrayList(List<List<Integer>> arrayList) {
+    for (List<Integer> array: arrayList) {
+      Collections.sort(array);
+    }
+    arrayList.sort(compareRule);
+  }
+
   public static boolean compareArrayList(List<Integer> l1, List<Integer> l2) {
     if (l1.size() != l2.size()) {
       return false;
