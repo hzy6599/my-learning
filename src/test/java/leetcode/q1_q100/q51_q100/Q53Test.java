@@ -10,12 +10,17 @@ import java.util.stream.Stream;
 
 public class Q53Test {
 
-  Q53 question = new Q53();
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void maxSubArrayDPWithArray(int[] input, int expected) {
+    int actual = Q53.maxSubArrayDPWithArray(input);
+    Assertions.assertEquals(expected, actual);
+  }
 
   @ParameterizedTest
   @MethodSource("dataProvider")
-  public void test(int[] input, int expected) {
-    int actual = question.maxSubArray(input);
+  public void maxSubArrayDPWithConstantSpace(int[] input, int expected) {
+    int actual = Q53.maxSubArrayDPWithConstantSpace(input);
     Assertions.assertEquals(expected, actual);
   }
 
