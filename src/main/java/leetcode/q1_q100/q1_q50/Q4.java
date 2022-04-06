@@ -2,6 +2,13 @@ package leetcode.q1_q100.q1_q50;
 
 public class Q4 {
 
+  /**
+   * This solution can also be solved by using binary search. The goal is to find two cut points mid1, mid2 which will split
+   * both array into two parts where the element in the first part will always be less or equal to the elements in the second part.
+   * With binary search we will locate the first cut point, and calculate the second point, then check if the condition matches.
+   * Time Complexity: O(logn)
+   * Space Complexity: O(1).
+   */
   public double findMedianSortedArrays(int[] nums1, int[] nums2) {
     if (nums1.length > nums2.length) {
       return findMedianSortedArrays(nums2, nums1);
