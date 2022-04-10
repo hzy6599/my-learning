@@ -6,6 +6,7 @@ public class Node {
   public Node left;
   public Node right;
   public Node next;
+  public Node parent;
 
   public Node() {}
 
@@ -13,11 +14,12 @@ public class Node {
     this.val = val;
   }
 
-  public Node(int val, Node left, Node right, Node next) {
+  public Node(int val, Node left, Node right, Node next, Node parent) {
     this.val = val;
     this.left = left;
     this.right = right;
     this.next = next;
+    this.parent = parent;
   }
 
 }
