@@ -14,6 +14,13 @@ public class Node {
     this.val = val;
   }
 
+  public Node(int val, Node left, Node right, Node next) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+    this.next = next;
+  }
+
   public Node(int val, Node left, Node right, Node next, Node parent) {
     this.val = val;
     this.left = left;
