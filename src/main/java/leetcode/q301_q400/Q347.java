@@ -16,7 +16,7 @@ public class Q347 {
    * Time Complexity: O(nlogn)
    * Space Complexity: O(n)
    */
-  public int[] topKFrequentWithHeap(int[] nums, int k) {
+  public static int[] topKFrequentWithHeap(int[] nums, int k) {
     Map<Integer, Integer> frequency = new HashMap<>();
 
     for (int i = 0; i < nums.length; i++) {
@@ -50,7 +50,7 @@ public class Q347 {
    * Time Complexity: O(n)
    * Space Complexity: O(n)
    */
-  public int[] topKFrequent(int[] nums, int k) {
+  public static int[] topKFrequentBucket(int[] nums, int k) {
     Map<Integer, Integer> frequency = new HashMap<>();
 
     for (int i = 0; i < nums.length; i++) {

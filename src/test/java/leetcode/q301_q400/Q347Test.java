@@ -9,19 +9,17 @@ import java.util.stream.Stream;
 
 public class Q347Test {
 
-  Q347 q347 = new Q347();
-
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void topKFrequentWithHeap(int[] nums, int target, int[] expected) {
-    int[] actual = q347.topKFrequentWithHeap(nums, target);
+    int[] actual = Q347.topKFrequentWithHeap(nums, target);
     Assertions.assertArrayEquals(expected, actual);
   }
 
   @ParameterizedTest
   @MethodSource("dataProvider")
   public void topKFrequentBucket(int[] nums, int target, int[] expected) {
-    int[] actual = q347.topKFrequentBucket(nums, target);
+    int[] actual = Q347.topKFrequentBucket(nums, target);
     Assertions.assertArrayEquals(expected, actual);
   }
 
