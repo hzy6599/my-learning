@@ -38,4 +38,18 @@ public class Q371 {
     return a1 * sign;
   }
 
+  /**
+   * Same idea but java specific.
+   */
+  public static int getSumJavaSpecific(int a, int b) {
+    while (b != 0) {
+      int ans = a ^ b;
+      int carry = (a & b) << 1;
+      a = ans;
+      b = carry;
+    }
+
+    return a;
+  }
+
 }

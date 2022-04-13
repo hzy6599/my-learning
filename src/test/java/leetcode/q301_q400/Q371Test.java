@@ -16,6 +16,13 @@ public class Q371Test {
     Assertions.assertEquals(expected, actual);
   }
 
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void getSumJavaSpecific(int s1, int s2, int expected) {
+    int actual = Q371.getSumJavaSpecific(s1, s2);
+    Assertions.assertEquals(expected, actual);
+  }
+
   private static Stream<Arguments> dataProvider() {
     return Stream.of(
         Arguments.of(-5, 3, -2),
