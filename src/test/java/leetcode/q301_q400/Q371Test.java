@@ -18,9 +18,11 @@ public class Q371Test {
 
   private static Stream<Arguments> dataProvider() {
     return Stream.of(
+        Arguments.of(-5, 3, -2),
         Arguments.of(1, 2, 3),
         Arguments.of(2, 3, 5),
-        Arguments.of(33, 22, 55)
+        Arguments.of(33, 22, 55),
+        Arguments.of(-3, 5, 2)
     );
   }
 
