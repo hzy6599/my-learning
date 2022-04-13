@@ -13,8 +13,15 @@ public class Q347Test {
 
   @ParameterizedTest
   @MethodSource("dataProvider")
-  public void test(int[] nums, int target, int[] expected) {
-    int[] actual = q347.topKFrequent(nums, target);
+  public void topKFrequentWithHeap(int[] nums, int target, int[] expected) {
+    int[] actual = q347.topKFrequentWithHeap(nums, target);
+    Assertions.assertArrayEquals(expected, actual);
+  }
+
+  @ParameterizedTest
+  @MethodSource("dataProvider")
+  public void topKFrequentBucket(int[] nums, int target, int[] expected) {
+    int[] actual = q347.topKFrequentBucket(nums, target);
     Assertions.assertArrayEquals(expected, actual);
   }
 
