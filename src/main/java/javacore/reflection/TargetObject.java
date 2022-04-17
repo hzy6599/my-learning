@@ -5,7 +5,7 @@ public class TargetObject {
   private String value;
 
   public TargetObject() {
-    this.value = "Reflection Demo";
+    this.value = "Reflection EnumDemo";
   }
 
   public void publicMethod(String s) {
