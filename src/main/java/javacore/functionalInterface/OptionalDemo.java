@@ -39,8 +39,7 @@ public class OptionalDemo {
   }
 
   private static Integer getScoreWithOptional(Student student) {
-    Integer score = Optional.of(student)
-
+    Integer score = Optional.ofNullable(student)
                         .map(Student::getSubject)
                         .map(Subject::getScore)
                         .orElse(null);
